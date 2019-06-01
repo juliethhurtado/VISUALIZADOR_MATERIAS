@@ -11,32 +11,25 @@
   <link rel="stylesheet" type="text/css" href="diseño.css">
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Iniciar Sesion</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input type="codigo" id="inputcodigo" class="form-control" >
+                <label for="inputcodigo">Codigo del Estudiante</label>
+              </div>
+              <a class = "btn btn-lg btn-primary btn-block text-uppercase" href=" principal.html">Ingresar</a>
+              <hr class="my-4">
 
-<div class="jumbotron text-center">
-  <h1>UNIVERSIDAD DEL CAUCA</h1>
-  <p>Ingenieria de Sistemas</p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="card-body">
-      <h5 class="card-title text-center">INICIAR SESION</h5>
-      <form class="form-signin">
-        <div class="form-label-group">
-          <input type="text" id="inputUserame" class="form-control" placeholder="codigo" required autofocus>
-          <label for="codigo">CODIGO DEL ESTUDIANTE</label>
+            </form>
+          </div>
         </div>
-
-
-
-        <button class ="btnPRINCIPAL" onclick="location='principal.html'">INGRESAR</button>
-        <hr class="my-4">
-        
-
-      </form>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>

@@ -1,57 +1,136 @@
-<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device, initial-scale=1"/>
-    <title>Compra Tus Pokemons</title>
-    <link rel="stylesheet" type="text/css" href="theme.css">
-    <link rel="stylesheet" type="text/css" href="estilosCarrito.css">
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-    <script src="PokemonsAJAX.js"></script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="diseño2.css">
 
 </head>
 <body>
-
-    <div class="centrado pokemon">
-
-        <div id="pokNombre"     class="centrado caja"></div>
-
-        <img id="pokImg" class="centrado caja" src="welcome.png"/>
-
-        <div id="pokTipo"       class="centrado caja"></div>
-        <div id="pokFuerza"     class="centrado caja"></div>
-        <div id="pokVelocidad"  class="centrado caja"></div>
-        <div id="pokEvolucion"  class="centrado caja"></div>
-
-        <form class = "centrado caja" method="get">
-            <select id = "selOpciones" name="pokemons" onchange="loadDoc(this.value)">
-                <option value="0">Seleccione Un Pokemon</option>
-                <option value="1">Charizar</option>
-                <option value="2">Charmander</option>
-                <option value="3">Clefairy</option>
-                <option value="4">Golduck</option>
-                <option value="5">Mankey</option>
-                <option value="6">Pidgey</option>
-                <option value="7">Pikachu</option>
-                <option value="8">Raticate</option>
-                <option value="9">Venonat</option>
-                <option value="10">Wartortle</option>
-            </select>
-        </form>
-        <div id = "divAgregar" class = "centrado caja">
-            <button name="botonAgregar" onclick="agregarPokCarro();">Agregar Al Carrito</button>
-        </div>
-
-
+  <div class="dropdown">
+  <span>Manual de Usuario</span>
+    <div class="dropdown-content">
+    <p>Hola ingeniero! :) estas son todas las materias de tu carrera!! solo tienes que darle CLICK a las materias aprobadas!!</p>
     </div>
-    <div id = "divCarrito" class = "carrito">Aqui van los Pokemons Comprados hasta el momento
+  </div>
+  <h1 class= "titulo" >INGENIERIA DE SISTEMAS</h1>
+  <h1 class= "titulo" >PRIMER SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Calculo 1 &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia " >Intro a la informatica &#9733 &#9733 &#9733</div>
+    <div class="materia">Intro a la ing de sistemas &#9733</div>
+    <div class="materia">Lab de intro a la informatica &#9733</div>
+    <div class="materia">Lectura y escritura &#9733</div>
+    <div class="materia ">Fish I &#9733 &#9733</div>
+  </div>
 
+  <h1></h1>
+  <h1 class= "titulo" >SEGUNDO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Calculo 2 &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia " >Lab mecanica &#9733</div>
+    <div class="materia">Mecanica &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab programacion O.O &#9733</div>
+    <div class="materia">Programacion O.O &#9733 &#9733 &#9733</div>
+    <div class="materia">Algebra Lineal &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia ">Fish II &#9733 &#9733 </div>
+  </div>
 
+  <h1></h1>
+  <h1 class= "titulo" >TERCER SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Calculo 3 &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia " >Electromagnetismo &#9733 &#9733 &#9733</div>
+    <div class="materia">Estruc de datos I &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Estruc de datos I &#9733</div>
+    <div class="materia">Lab Electromagnetismo &#9733</div>
+    <div class="materia">Fish III &#9733 &#9733</div>
+  </div>
 
-    </div>
+  <h1></h1>
+  <h1 class= "titulo" >CUARTO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Bases de datos I &#9733 &#9733 &#9733</div>
+    <div class="materia " >Lab Bases de datos I &#9733</div>
+    <div class="materia">Ecuaciones Dif &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia">Estruc de datos II &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Estruc de datos II &#9733</div>
+    <div class="materia">Vibraciones y Ondas &#9733 &#9733 &#9733</div>
+  </div>
 
+  <h1></h1>
+  <h1 class= "titulo" >QUINTO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Analisis numerico &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia " >Arquitectura Comp &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia">Bases de datos II &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Bases de datos II &#9733</div>
+    <div class="materia">Lab Ing de Software I &#9733</div>
+    <div class="materia">Ing de Software I &#9733 &#9733 &#9733</div>
+    <div class="materia">Teoria de la Compn &#9733 &#9733 &#9733</div>
+  </div>
+
+  <h1></h1>
+  <h1 class= "titulo" >SEXTO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Estadistica y Prob &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia " >Estruc de Lenguaje &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Estruc de Lenguaje &#9733</div>
+    <div class="materia">Ing de Software II &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Ing de Software II &#9733</div>
+    <div class="materia">Sistemas Operativos &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Sistemas Operativos &#9733</div>
+  </div>
+
+  <h1></h1>
+  <h1 class= "titulo" >SEPTIMO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Ing de Software III &#9733 &#9733 &#9733 </div>
+    <div class="materia " >Lab Ing de Software III &#9733</div>
+    <div class="materia">Inteligencia Artificial &#9733 &#9733 &#9733</div>
+    <div class="materia">Sistemas Distribuidos &#9733 &#9733 &#9733</div>
+    <div class="materia">Lab Sistemas Distribuidos &#9733</div>
+    <div class="materia">Met de la investigacion &#9733 &#9733 &#9733</div>
+    <div class="materia">Teoria y Dinamica de S &#9733 &#9733 &#9733</div>
+  </div>
+
+  <h1></h1>
+  <h1 class= "titulo" >OCTAVO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Calidad de Software &#9733 &#9733 &#9733</div>
+    <div class="materia " >Electiva I &#9733 &#9733 &#9733</div>
+    <div class="materia">Electiva II &#9733 &#9733 &#9733</div>
+    <div class="materia">Inv de Operaciones &#9733 &#9733 &#9733 &#9733</div>
+    <div class="materia">Proyecto I &#9733 &#9733 &#9733</div>
+    <div class="materia">Redes &#9733 &#9733 &#9733 &#9733</div>
+  </div>
+
+  <h1></h1>
+  <h1 class= "titulo" >NOVENO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Electiva III &#9733 &#9733 &#9733</div>
+    <div class="materia " >Electiva IV &#9733 &#9733 &#9733</div>
+    <div class="materia">Fund de Economia &#9733 &#9733 &#9733</div>
+    <div class="materia">Gestion Empresarial &#9733 &#9733 &#9733</div>
+    <div class="materia">Gestion de Proy inf &#9733 &#9733 &#9733</div>
+    <div class="materia">Legislacion Laboral &#9733 &#9733 &#9733</div>
+    <div class="materia">Proyecto II &#9733 &#9733 &#9733</div>
+  </div>
+
+  <h1></h1>
+  <h1 class= "titulo" >DECIMO SEMESTRE</h1>
+  <div class="semestre">
+    <div class="materia ">Electiva V &#9733 &#9733 &#9733</div>
+    <div class="materia " >Etica &#9733</div>
+    <div class="materia">Trabajo de Grado &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 &#9733 </div>
+  </div>
+  <script src="estudAJAX.js"></script>
 </body>
 </html>
